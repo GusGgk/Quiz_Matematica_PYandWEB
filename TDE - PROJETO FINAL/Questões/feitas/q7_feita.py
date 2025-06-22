@@ -1,0 +1,16 @@
+def q7():
+    print("-" * 30)
+    print("QUESTÃO 7 - MÓDULO (RESTO) COM DIVISOR ZERO")
+    print("-" * 30)
+
+    dividendo = int(input("Digite o número a ser dividido: "))
+    divisor = int(input("Digite o número para dividir (divisor): "))
+
+    if divisor != 0:
+        resultado = dividendo % divisor
+        print(f"O resto da divisão é: {resultado}")
+    else:
+        print("O divisor não pode ser zero, pois isso resulta em erro matemático.")
+
+if __name__ == "__main__":
+    q7()

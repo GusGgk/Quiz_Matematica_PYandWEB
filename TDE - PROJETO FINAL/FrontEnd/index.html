@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Restrições Matemáticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Restrições Matemáticas em Python</h1>
+
+        <!-- Questão 1 -->
+        <div class="questao" id="q1">
+            <h2>Questão 1 - Divisão por Zero</h2>
+            <pre><code>
+numero_principal = 10
+num_user = float(input("Digite um número para dividir por 10: "))
+
+if 
+<select id="q1_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="num_user!=0">num_user != 0</option>
+    <option value="num_user==0">num_user == 0</option>
+    <option value="numero_principal!=0">numero_principal != 0</option>
+</select>:
+    resultado = numero_principal / num_user
+    print("A divisão é:", resultado)
+else:
+    print("Não é possível dividir por 
+<select id="q1_erro">
+    <option value="">-- Selecione o motivo --</option>
+    <option value="zero">zero</option>
+    <option value="um">um</option>
+    <option value="negativo">negativo</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ1()">Verificar</button>
+            <p id="q1_feedback"></p>
+        </div>
+
+        <!-- Questão 2 -->
+        <div class="questao hidden" id="q2">
+            <h2>Questão 2 - Raiz Quadrada de Número Negativo</h2>
+            <pre><code>
+import math
+num_user = float(input("Digite um número para calcular a raiz quadrada: "))
+
+if 
+<select id="q2_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="num_user>=0">num_user >= 0</option>
+    <option value="num_user>0">num_user > 0</option>
+    <option value="num_user!=0">num_user != 0</option>
+</select>:
+    resultado = math.sqrt(num_user)
+    print("A raiz quadrada é:", resultado)
+else:
+    print("Não é possível calcular a raiz quadrada de 
+<select id="q2_erro">
+    <option value="">-- Selecione o motivo --</option>
+    <option value="número negativo">número negativo</option>
+    <option value="zero">zero</option>
+    <option value="positivo">positivo</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ2()">Verificar</button>
+            <p id="q2_feedback"></p>
+        </div>
+
+        <!-- Questões 3 a 10 -->
+        <div class="questao hidden" id="q3">
+            <h2>Questão 3 - Logaritmo de Número Não Positivo</h2>
+            <pre><code>
+import math
+num_user = float(input("Digite um número para calcular o logaritmo: "))
+
+if 
+<select id="q3_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="num_user>0">num_user > 0</option>
+    <option value="num_user>=0">num_user >= 0</option>
+    <option value="num_user!=0">num_user != 0</option>
+</select>:
+    resultado = math.log(num_user)
+    print("O logaritmo é:", resultado)
+else:
+    print("Não é possível calcular o logaritmo de 
+<select id="q3_erro">
+    <option value="">-- Selecione o motivo --</option>
+    <option value="zero">zero</option>
+    <option value="número negativo">número negativo</option>
+    <option value="positivo">positivo</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ3()">Verificar</button>
+            <p id="q3_feedback"></p>
+        </div>
+
+        <!-- Questão 4 -->
+        <div class="questao hidden" id="q4">
+            <h2>Questão 4 - Raiz de Índice Par de Número Negativo</h2>
+            <pre><code>
+indice = int(input("Digite o índice da raiz: "))
+radicando = float(input("Digite o número para extrair a raiz: "))
+
+if 
+<select id="q4_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="indice%2!=0 or radicando>=0">indice % 2 != 0 or radicando >= 0</option>
+    <option value="indice%2==0 and radicando<0">indice % 2 == 0 and radicando < 0</option>
+</select>:
+    resultado = radicando ** (1 / indice)
+    print("Resultado:", resultado)
+else:
+    print("Não é possível extrair raiz de índice par de 
+<select id="q4_erro">
+    <option value="">-- Selecione --</option>
+    <option value="número negativo">número negativo</option>
+    <option value="número positivo">número positivo</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ4()">Verificar</button>
+            <p id="q4_feedback"></p>
+        </div>
+
+        <!-- Questão 5 -->
+        <div class="questao hidden" id="q5">
+            <h2>Questão 5 - Exponenciação com base zero e expoente negativo</h2>
+            <pre><code>
+base = float(input("Digite a base: "))
+expoente = float(input("Digite o expoente: "))
+
+if 
+<select id="q5_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="base!=0 or expoente>=0">base != 0 or expoente >= 0</option>
+    <option value="base==0 and expoente<0">base == 0 and expoente < 0</option>
+</select>:
+    resultado = base ** expoente
+    print("Resultado:", resultado)
+else:
+    print("Não é possível elevar zero a um expoente 
+<select id="q5_erro">
+    <option value="">-- Selecione --</option>
+    <option value="negativo">negativo</option>
+    <option value="positivo">positivo</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ5()">Verificar</button>
+            <p id="q5_feedback"></p>
+        </div>
+
+        <!-- Questão 6 -->
+        <div class="questao hidden" id="q6">
+            <h2>Questão 6 - Módulo com Divisor Zero</h2>
+            <pre><code>
+dividendo = int(input("Digite o número a ser dividido: "))
+divisor = int(input("Digite o divisor: "))
+
+if 
+<select id="q6_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="divisor!=0">divisor != 0</option>
+    <option value="dividendo!=0">dividendo != 0</option>
+</select>:
+    resultado = dividendo % divisor
+    print("Resto:", resultado)
+else:
+    print("Não é possível dividir por 
+<select id="q6_erro">
+    <option value="">-- Selecione --</option>
+    <option value="zero">zero</option>
+    <option value="um">um</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ6()">Verificar</button>
+            <p id="q6_feedback"></p>
+        </div>
+
+        <!-- Questão 7 -->
+        <div class="questao hidden" id="q7">
+            <h2>Questão 7 - Expressão Quadrática no Denominador</h2>
+            <pre><code>
+x = float(input("Digite o valor de x: "))
+
+if 
+<select id="q7_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="x!=2 and x!=-2">x != 2 and x != -2</option>
+    <option value="x==2 or x==-2">x == 2 or x == -2</option>
+</select>:
+    resultado = 1 / (x**2 - 4)
+    print("Resultado:", resultado)
+else:
+    print("O valor de x não pode ser 
+<select id="q7_erro">
+    <option value="">-- Selecione --</option>
+    <option value="2 ou -2">2 ou -2</option>
+    <option value="4">4</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ7()">Verificar</button>
+            <p id="q7_feedback"></p>
+        </div>
+
+        <!-- Questão 8 -->
+        <div class="questao hidden" id="q8">
+            <h2>Questão 8 - Logaritmo com Base Inválida</h2>
+            <pre><code>
+import math
+valor = float(input("Digite o valor: "))
+base = float(input("Digite a base: "))
+
+if 
+<select id="q8_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="valor>0 and base>0 and base!=1">valor > 0 and base > 0 and base != 1</option>
+    <option value="valor>=0 and base==1">valor >= 0 and base == 1</option>
+</select>:
+    resultado = math.log(valor, base)
+    print("Resultado:", resultado)
+else:
+    print("A base do logaritmo não pode ser 
+<select id="q8_erro">
+    <option value="">-- Selecione --</option>
+    <option value="1">1</option>
+    <option value="10">10</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ8()">Verificar</button>
+            <p id="q8_feedback"></p>
+        </div>
+
+        <!-- Questão 9 -->
+        <div class="questao hidden" id="q9">
+            <h2>Questão 9 - Raiz Cúbica de Número Negativo</h2>
+            <pre><code>
+num = float(input("Digite um número: "))
+
+if 
+<select id="q9_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="True">True</option>
+    <option value="num>=0">num >= 0</option>
+</select>:
+    resultado = num ** (1/3)
+    print("Resultado:", resultado)
+else:
+    print("Não é possível extrair raiz cúbica de 
+<select id="q9_erro">
+    <option value="">-- Selecione --</option>
+    <option value="número negativo">número negativo</option>
+    <option value="número ímpar">número ímpar</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ9()">Verificar</button>
+            <p id="q9_feedback"></p>
+        </div>
+
+        <!-- Questão 10 -->
+        <div class="questao hidden" id="q10">
+            <h2>Questão 10 - Divisão com Denominador Algébrico</h2>
+            <pre><code>
+x = float(input("Digite o valor de x: "))
+
+if 
+<select id="q10_cond">
+    <option value="">-- Selecione a condição --</option>
+    <option value="x!=3">x != 3</option>
+    <option value="x==3">x == 3</option>
+</select>:
+    resultado = 1 / (x - 3)
+    print("Resultado:", resultado)
+else:
+    print("Não é possível dividir por 
+<select id="q10_erro">
+    <option value="">-- Selecione --</option>
+    <option value="zero">zero</option>
+    <option value="um">um</option>
+</select>.")
+            </code></pre>
+            <button onclick="verificarQ10()">Verificar</button>
+            <p id="q10_feedback"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
