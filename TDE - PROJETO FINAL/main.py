@@ -14,7 +14,7 @@ from Questões.feitas.q10_feita import q10
 
 def abrir_interface_web():
     print("Abrindo o quiz no navegador...")
-    webbrowser.open("http://127.0.0.1:5501/FrontEnd/index.html")
+    webbrowser.open("http://127.0.0.1:5500/TDE%20-%20PROJETO%20FINAL/FrontEnd/index.html")
 
 def menu_python():
     print("\nQUESTÕES RESOLVIDAS EM PYTHON")
